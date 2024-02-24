@@ -303,7 +303,7 @@ HOME SECTION
    display: block;
    font-size: clamp(3.5rem, 10vw, 8rem);
    font-family: "Riot", sans-serif;
-   text-shadow: 2px 2px 3px var(--clr-gold-300);
+   text-shadow: 2px 2px 3px var(--clr-gold-500);
 
    margin-bottom: 0.5rem;
 }
@@ -361,9 +361,14 @@ PRODUCTS SECTION
    background-color: rgba(255, 255, 255, .2);
    border-radius: .15rem;
    cursor: pointer;
+   font-size: .95rem;
 
    transition: .2s ease;
 }
+.products-filter .filter i{
+   color: rgb(200, 200, 200);
+}
+
 .products-filter .filter:hover {
    background-color: rgba(255, 255, 255, .3);
 }
@@ -373,6 +378,9 @@ PRODUCTS SECTION
 
 .products-filter .filter.active {
    background-color: var(--clr-gold-a500);
+}
+.products-filter .filter.active i{
+   color: var(--clr-gold-300);
 }
 .products-filter .filter.active:hover {
    background-color: var(--clr-gold-a300);
@@ -1187,6 +1195,10 @@ SCREENS 600PX & UNDER
    .contact {
       --gap: .5rem;
    }
+
+   .products-filter .filter {
+      font-size: .8rem;
+   }
 }
 
 @media only screen and (max-width: 550px) {
@@ -1275,5 +1287,10 @@ SCREENS 600PX & UNDER
 
    .logo-slider a {
       margin: 0 22px;
+   }
+
+   .products-filter .filter {
+      font-size: .75rem;
+      padding: .45rem;
    }
 }

@@ -180,18 +180,50 @@ window.addEventListener("scroll", (e) => {
 });
 
 // HOVER TRIGGER
-const trigger = document.querySelector('#nav-bar');
+const trigger = document.querySelector("#nav-bar");
 
-trigger.addEventListener('mouseover', e => {
+trigger.addEventListener("mouseover", (e) => {
    if (scrollY == 0) {
-      navbar.classList.remove('hidden')
+      navbar.classList.remove("hidden");
    }
 
-   e.target.addEventListener('mouseleave', e => {
+   e.target.addEventListener("mouseleave", (e) => {
       if (scrollY == 0) {
-         navbar.classList.add('hidden');
+         navbar.classList.add("hidden");
       }
-   })
+   });
+});
+
+/* ------------
+PRODUCTS FILTER
+------------ */
+
+const filterToggles = document.querySelectorAll(".filter");
+const products = document.querySelectorAll(".product");
+
+filterToggles.forEach((tog) => {
+   const filterType = tog.getAttribute("data-filter-type");
+   // console.log(filterType);
+
+   tog.addEventListener("click", (e) => {
+      filterToggles.forEach((el) => {
+         el.classList.remove("active");
+      });
+      e.target.classList.add("active");
+
+      products.forEach((product) => {
+         product.style.display = "flex";
+         if (product.getAttribute("data-filter") != filterType) {
+            product.style.display = "none";
+         }
+      });
+
+      if (filterType == "all") {
+         products.forEach((el) => {
+            el.style.display = "flex";
+         });
+      }
+   });
 });
 
 console.log("script.js connected.");

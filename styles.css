@@ -29,7 +29,7 @@
    /* INDICATORS */
    --clr-msg-success: hsl(130, 80%, 60%);
    --clr_msg-warning: hsl(35, 80%, 58%);
-   --clr-msg-danger: hsl(10, 80%, 55%);
+   --clr-msg-danger: hsl(5, 80%, 55%);
    --clr-msg-neutral: hsl(210, 90%, 60%);
 
    /* ALPHA GOLD */
@@ -341,8 +341,41 @@ PRODUCTS SECTION
 }
 
 #products {
-   justify-content: start;
-   padding-top: 6rem;
+   align-items: center;
+   padding-top: 3rem;
+}
+
+.products-filter {
+   width: min(1200px, 100%);
+   display: flex;
+   gap: .8rem;
+   padding: 1rem;
+   border: solid 1px rgba(255, 255, 255, .2);
+   border-top-left-radius: .3rem;
+   border-top-right-radius: .3rem;
+   border-bottom: none;
+}
+
+.products-filter .filter {
+   padding: .6rem;
+   background-color: rgba(255, 255, 255, .2);
+   border-radius: .15rem;
+   cursor: pointer;
+
+   transition: .2s ease;
+}
+.products-filter .filter:hover {
+   background-color: rgba(255, 255, 255, .3);
+}
+.products-filter .filter:active {
+   background-color: rgba(255, 255, 255, .45);
+}
+
+.products-filter .filter.active {
+   background-color: var(--clr-gold-a500);
+}
+.products-filter .filter.active:hover {
+   background-color: var(--clr-gold-a300);
 }
 
 .products-wrapper {
@@ -352,6 +385,10 @@ PRODUCTS SECTION
    column-gap: 30px;
    row-gap: 50px;
    width: min(1200px, 100%);
+   padding: 1rem;
+   border: solid 1px rgba(255, 255, 255, 0.2);
+   border-bottom-left-radius: .3rem;
+   border-bottom-right-radius: .3rem;
 }
 
 .product {
@@ -527,6 +564,10 @@ ADVERT SECTION
 ----------- */
 
 /* Delivery Services */
+
+#find-us {
+   min-height: unset;
+}
 
 .delivery-services {
    position: relative;
@@ -750,7 +791,6 @@ FEATURES SECTION
 #features {
    min-height: 100vh;
    width: 100%;
-   padding-inline: 2rem;
 }
 
 .features-container {
@@ -991,12 +1031,12 @@ FEATURES SECTION
    display: flex;
    flex-direction: column;
    align-items: center;
-   gap: var(--gap);
+   gap: calc(var(--gap) * 1.5);
 }
 
 .contact-form .row {
    display: flex;
-   gap: calc(var(--gap) * 1.5);
+   gap: var(--gap);
    width: 100%;
 }
 .contact-form .row > * {
@@ -1011,6 +1051,7 @@ FEATURES SECTION
    color: var(--clr-gold-100);
    font-family: "PlexMono";
    z-index: 0;
+   min-width: 0;
 
    transition: 0.2s ease;
 }
@@ -1021,6 +1062,9 @@ FEATURES SECTION
    transition: 0.2s ease;
 }
 
+.contact-form .row > *:focus {
+   background-color: rgba(255, 255, 255, .05);
+}
 .contact-form .row > *:focus:empty {
    border-color: var(--clr-msg-danger);
 }
@@ -1031,9 +1075,6 @@ FEATURES SECTION
    border-color: var(--clr-msg-success);
 }
 
-.contact-form .row > *:focus {
-   border: solid 2px var(--clr-gold-300);
-}
 .contact-form .row > *:focus::placeholder {
    opacity: 0;
 }
@@ -1064,6 +1105,18 @@ FEATURES SECTION
    .product .details > p,
    .product .details > span {
       font-size: 1rem;
+   }
+
+   .delivery-services {
+      padding: 1rem;
+   }
+
+   .logo-slider img {
+      height: 30px;
+   }
+
+   .logo-slider a {
+      margin: 0 30px;
    }
 }
 
@@ -1108,6 +1161,32 @@ SCREENS 600PX & UNDER
    .demo-video > .controls .time {
       font-size: 0.9rem;
    }
+
+   .delivery-services {
+      padding: .8rem;
+   }
+
+   .logo-slider img {
+      height: 25px;
+   }
+
+   .logo-slider a {
+      margin: 0 25px;
+   }
+
+   section {
+      padding-inline: 1rem;
+   }
+   section header {
+      font-size: 2rem;
+   }
+   section h3 {
+      font-size: 1.3rem;
+   }
+
+   .contact {
+      --gap: .5rem;
+   }
 }
 
 @media only screen and (max-width: 550px) {
@@ -1124,10 +1203,6 @@ SCREENS 600PX & UNDER
 
    :root {
       --product-dimension: 160px;
-   }
-
-   section {
-      padding-inline: 1.2rem;
    }
 
    .product .details > p,
@@ -1148,6 +1223,13 @@ SCREENS 600PX & UNDER
    .product .thumbnail i {
       --offset: 0.4rem;
       font-size: 0.9rem;
+   }
+
+   .contact-form .row > * {
+      padding: .5rem;
+   }
+   .contact-form .row > *::placeholder {
+      font-size: .7rem;
    }
 }
 
@@ -1181,5 +1263,17 @@ SCREENS 600PX & UNDER
    }
    .demo-video > .controls .control {
       gap: 0.8rem;
+   }
+
+   .delivery-services {
+      padding: .75rem;
+   }
+
+   .logo-slider img {
+      height: 22px;
+   }
+
+   .logo-slider a {
+      margin: 0 22px;
    }
 }

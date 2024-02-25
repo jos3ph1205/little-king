@@ -3,11 +3,12 @@
    <head>
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>Document</title>
+      <title>Little King</title>
       <link rel="stylesheet" href="styles.css" />
       <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
       <link href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css" rel="stylesheet" />
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+      <link rel="icon" type="image/x-icon" href="icons/logo/favicon.ico">
    </head>
    <body id="content">
       <div class="fullscreen-preview disabled">
@@ -17,7 +18,7 @@
       <header id="header">
          <nav id="nav-bar">
             <div class="header hidden">
-               <img id="header-img" src="media/images/logo/Full-Logo.png" alt="" />
+               <img id="header-img" src="icons/logo/Full-Logo.png" alt="" />
                <nav id="nav-links">
                   <a class="nav-link" href="#products">Products</a>
                   <a class="nav-link" href="#find-us">Stores</a>
@@ -45,8 +46,8 @@
             <header>Our Products</header>
             <div class="products-filter">
                <div data-filter-type="all" class="filter active">All</div>
-               <div data-filter-type="popular" class="filter" ><i class="fa-solid fa-fire"></i> Popular</div>
-               <div data-filter-type="on-sale" class="filter" ><i class="fa-solid fa-tag"></i> On Sale</div>
+               <div data-filter-type="popular" class="filter"><i class="fa-solid fa-fire"></i> Popular</div>
+               <div data-filter-type="on-sale" class="filter"><i class="fa-solid fa-tag"></i> On Sale</div>
             </div>
             <div class="products-wrapper">
                <div data-filter="popular" class="product">
@@ -128,7 +129,7 @@
                   </div>
                   <input class="buy" type="button" value="BUY" />
                </div>
-               <div  data-filter="popular" class="product">
+               <div data-filter="popular" class="product">
                   <div class="thumbnail">
                      <img id="img" src="media/images/little-king-shirts/8-Dark-Green.png" alt="" />
                      <i class="fa-solid fa-expand preview-fullscreen"></i>
@@ -139,7 +140,7 @@
                   </div>
                   <input class="buy" type="button" value="BUY" />
                </div>
-               <div  data-filter="on-sale" class="product">
+               <div data-filter="on-sale" class="product">
                   <div class="thumbnail">
                      <img id="img" src="media/images/little-king-shirts/9-Medium-Grey.png" alt="" />
                      <i class="fa-solid fa-expand preview-fullscreen"></i>
@@ -151,7 +152,7 @@
                   <input class="buy" type="button" value="BUY" />
                   <span class="discount-percent">15% OFF</span>
                </div>
-               <div  data-filter="" class="product">
+               <div data-filter="" class="product">
                   <div class="thumbnail">
                      <img id="img" src="media/images/little-king-shirts/10-Pastel-Green.png" alt="" />
                      <i class="fa-solid fa-expand preview-fullscreen"></i>
@@ -297,19 +298,33 @@
             </div>
             <div class="contact">
                <h3>Contact Us For More Info</h3>
-               <form target="_blank" class="contact-form" id="form" action="https://formsubmit.co/f148c52eeeea6dd54dc8dda9af7f0988" method="POST">
+               <form
+                  target="_blank"
+                  class="contact-form"
+                  id="form"
+                  action="https://formsubmit.co/f148c52eeeea6dd54dc8dda9af7f0988"
+                  method="POST"
+               >
                   <div class="row">
-                     <input type="text" name="First-Name" id="first-name" placeholder="First Name" required/>
-                     <input type="text" name="Last-Name" id="last-name" placeholder="Last Name" required/>
+                     <input type="text" name="First-Name" id="first-name" placeholder="First Name" required />
+                     <input type="text" name="Last-Name" id="last-name" placeholder="Last Name" required />
                   </div>
                   <div class="row">
-                     <input type="email" name="Email" id="email" placeholder="Mail" required/>
-                     <input type="number" name="Phone-Number" id="number" placeholder="Phone Number" required/>
+                     <input type="email" name="Email" id="email" placeholder="Mail" required />
+                     <input type="number" name="Phone-Number" id="number" placeholder="Phone Number" required />
                   </div>
                   <div class="row">
-                     <textarea id="" name="Message" cols="30" rows="10" placeholder="Message" style="resize: none;" required></textarea>
+                     <textarea
+                        id=""
+                        name="Message"
+                        cols="30"
+                        rows="10"
+                        placeholder="Message"
+                        style="resize: none"
+                        required
+                     ></textarea>
                   </div>
-                  <input type="hidden" name="_url" value="https://jos3ph1205.github.io/little-king/">
+                  <input type="hidden" name="_url" value="https://jos3ph1205.github.io/little-king/" />
                   <button class="submit" type="submit" id="submit">SUBMIT</button>
                </form>
             </div>
